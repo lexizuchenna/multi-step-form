@@ -199,7 +199,7 @@ function App() {
         {state !== 5 && (
           <header>
             <h1>{headerInfo[state].h1}</h1>
-            <h3>{headerInfo[state].h3}</h3>
+            <h2>{headerInfo[state].h3}</h2>
           </header>
         )}
         {getComponent()}

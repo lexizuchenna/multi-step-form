@@ -159,9 +159,10 @@ header h1 {
   margin-bottom: 10px;
 }
 
-header h3 {
+header h2 {
   color: var(--cool-gray);
   font-weight: 400;
+  font-size: 1.17rem;
 }
 
 footer button:last-child:hover {
