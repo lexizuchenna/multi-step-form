@@ -201,7 +201,7 @@ fieldset span.show {
 
 fieldset input {
   width: 100%;
-  border: 2px solid var(--cool-gray);
+  border: 1px solid var(--cool-gray);
   border-radius: 7px;
   outline: none;
   font-size: 1rem;
@@ -211,7 +211,7 @@ fieldset input {
 }
 
 fieldset input:focus {
-  border: 2px solid var(--purplish-blue);
+  border: 1px solid var(--purplish-blue);
 }
 
 fieldset input::placeholder {
@@ -233,8 +233,8 @@ fieldset input::placeholder {
 }
 
 .plan.active {
-  border: 1px solid var(--marine-blue);
-  background-color: var(--magnolia);
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--alabaster);
 }
 
 .plan .icon {
@@ -464,4 +464,140 @@ fieldset input::placeholder {
 footer button.finish {
   background-color: var(--purplish-blue);
   border: 1px solid var(--purplish-blue);
+}
+
+@media (max-width: 850px) {
+  .container {
+    gap: 50px;
+  }
+  main {
+    width: calc(100% - 350px);
+    padding-right: 20px;
+  }
+
+  .plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .plan {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .plan .icon {
+    margin-bottom: 0;
+  }
+
+  .plan-duration {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    background-color: var(--magnolia);
+  }
+
+  aside {
+    position: absolute;
+    height: 200px;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("/assets/images/bg-sidebar-mobile.svg");
+    border-radius: 0;
+    padding-left: 0;
+  }
+
+  aside ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  aside ul li div {
+    display: none;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  main {
+    position: absolute;
+    width: unset;
+    background-color: #fff;
+    right: 0;
+    left: 0;
+    top: 120px;
+    margin: 0 20px;
+    border-radius: 10px;
+    padding: 30px;
+  }
+
+  .plans {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .plan {
+    width: calc(100% / 3);
+    display: block;
+  }
+
+  .plan .icon {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 580px) {
+  .plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .plan {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .plan .icon {
+    margin-bottom: 0;
+  }
+
+  .plan-duration {
+    margin-top: 20px;
+  }
+
+  .addon {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .addon h3 {
+    font-size: 1rem;
+  }
+
+  .addon span {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 750px) {
+  main {
+    padding-bottom: 130px;
+  }
 }

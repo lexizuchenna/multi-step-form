@@ -23,7 +23,7 @@ function AddOns({ billing, addOns, setAddOns }: AddOnsProp) {
       <div className="addon-container">
         {addOns.map((addon) => (
           <div
-            className={`addon ${addon.isSelected && "active"}`}
+            className={`addon ${addon.isSelected ? "active" : ""}`}
             key={addon.name}
             onClick={() => handleAddOn(addon.name)}
           >

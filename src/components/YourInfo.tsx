@@ -1,6 +1,4 @@
-import { YourInfoProps } from "../types";
-
-type formNames = "name" | "email address" | "phone number";
+import { formNames, YourInfoProps } from "../types";
 
 function YourInfo({ inputItems, handleInput, formData }: YourInfoProps) {
   return (

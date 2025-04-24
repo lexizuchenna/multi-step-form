@@ -32,7 +32,7 @@ function SelectPlan({
       <div className="plans">
         {planItems.map(({ icon, plan, price, isSelected }) => (
           <div
-            className={`plan ${isSelected && "active"}`}
+            className={`plan ${isSelected ? "active" : ""}`}
             key={plan}
             onClick={() => handlePlanItem(plan)}
           >
@@ -54,7 +54,7 @@ function SelectPlan({
       <div className="plan-duration">
         <span className={billing === "monthly" ? "active" : ""}>Monthly</span>
         <div
-          className={`toggle-container ${billing === "yearly" && "yearly"}`}
+          className={`toggle-container ${billing === "yearly" ? "yearly" : ""}`}
           onClick={handleBilling}
         >
           <div className="toggle"></div>

@@ -3,6 +3,11 @@ export type InputItem = {
   placeholder: string;
   isError: boolean;
 };
+
+export type formNames = "name" | "email address" | "phone number";
+
+export type Billing = "monthly" | "yearly";
+
 export type PlanItem = {
   icon: string;
   plan: string;
@@ -28,20 +33,20 @@ export interface YourInfoProps {
 }
 
 export interface SelectPlanProp {
-  billing: "monthly" | "yearly";
-  setBilling: React.Dispatch<React.SetStateAction<"monthly" | "yearly">>;
+  billing: Billing;
+  setBilling: React.Dispatch<React.SetStateAction<Billing>>;
   planItems: PlanItem[];
   setPlanItems: React.Dispatch<React.SetStateAction<PlanItem[]>>;
 }
 
 export interface AddOnsProp {
-  billing: "monthly" | "yearly";
+  billing: Billing;
   addOns: AddOn[];
   setAddOns: React.Dispatch<React.SetStateAction<AddOn[]>>;
 }
 
 export interface SummaryProp {
-  billing: "monthly" | "yearly";
+  billing: Billing;
   planItems: PlanItem[];
   addOns: AddOn[];
 }

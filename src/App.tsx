@@ -6,11 +6,11 @@ import AddOns from "./components/AddOns";
 import Summary from "./components/Summary";
 import Finish from "./components/Finish";
 
-import { AddOn, InputItem, PlanItem } from "./types";
+import { AddOn, Billing, InputItem, PlanItem } from "./types";
 
 function App() {
   const [state, setState] = useState<1 | 2 | 3 | 4 | 5>(1);
-  const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+  const [billing, setBilling] = useState<Billing>("monthly");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -37,7 +37,7 @@ function App() {
       icon: "/assets/images/icon-arcade.svg",
       plan: "Arcade",
       price: { mon: 9, yr: 90 },
-      isSelected: false,
+      isSelected: true,
     },
     {
       icon: "/assets/images/icon-advanced.svg",
